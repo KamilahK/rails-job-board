@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JobBoard</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <header class='clearfix'>
+  	<div class="left-nav">
+  		<ul>
+  			<li><%= link_to "Home", jobs_path %></li>
+  		</ul>
+
+  	</div>
+  	<div class="right-nav">
+  		<ul>
+  			<li><%= link_to "Add Job", new_job_path %></li>
+  		</ul>
+  	</div>
+    </header>
+  	<div>
+    <%= yield %>
+    </div>
+
+  </body>
+</html>
